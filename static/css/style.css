@@ -1,0 +1,52 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d1117;
+    color: #d1e7dd;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 0;
+    color: #78ffb7;
+}
+
+.card {
+    background: #111927;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 14px;
+    width: 80%;
+    box-shadow: 0px 0px 15px rgba(0,255,150,0.1);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.data-table th {
+    background: #0f5132;
+    padding: 10px;
+}
+
+.data-table td {
+    padding: 8px;
+    background: #0b2833;
+}
+
+.btn {
+    background: #198754;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #22b26c;
+}

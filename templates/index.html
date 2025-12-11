@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediksi Produksi Sampah Bandung</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <h1>Prediksi Produksi Sampah — Kota Bandung</h1>
+    <p>Monte Carlo Simulation • Go Green • Lingkungan Berkelanjutan</p>
+</header>
+
+<main>
+
+<section class="card">
+    <h2>Preview Dataset</h2>
+
+    <table class="data-table" id="data-table">
+        <thead>
+            <tr>
+                {% for key in preview[0].keys() %}
+                    <th>{{ key }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for row in preview %}
+            <tr>
+                {% for v in row.values() %}
+                    <td>{{ v }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button onclick="scrollToTable()" class="btn">Pelajari Data</button>
+</section>
+
+<section class="card">
+    <h2>Hasil Prediksi Monte Carlo (12 Bulan)</h2>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Bulan</th>
+                <th>P10</th>
+                <th>P50</th>
+                <th>P90</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in forecast %}
+            <tr>
+                <td>{{ row.date }}</td>
+                <td>{{ row.p10 }}</td>
+                <td>{{ row.p50 }}</td>
+                <td>{{ row.p90 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+</main>
+
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>
